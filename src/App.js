@@ -24,7 +24,7 @@ export default function App() {
         }
         if (inptVal) {
           const searchedProduct = item.filter((item) =>
-            item.title.toLowerCase().includes(inptVal)
+            item.title.toLowerCase().includes(inptVal.toLowerCase())
           );
           setPhones(searchedProduct);
           setLoading(false); // Data loaded successfully, set loading to false
@@ -35,6 +35,7 @@ export default function App() {
         }
       } catch (error) {
         console.error("Error fetching data:", error);
+        alert("check your internet connection");
         setPhones([]);
         setLoading(false); // An error occurred, set loading to false
       }
@@ -65,12 +66,12 @@ export default function App() {
         const nameB = b.title.toUpperCase();
 
         if (nameA < nameB) {
-          return -1; // If nameA is less than nameB, place a before b
+          return -1;
         }
         if (nameA > nameB) {
-          return 1; // If nameA is greater than nameB, place a after b
+          return 1;
         }
-        return 0; // Names are equal, no change in order
+        return 0;
       });
     } else if (selectedOption === "price") {
       item.sort((a, b) => {
