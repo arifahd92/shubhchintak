@@ -84,7 +84,11 @@ export default function App() {
   };
   // Render a loading message while waiting for data
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="containerLoader">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   return (
