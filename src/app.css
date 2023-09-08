@@ -1,0 +1,43 @@
+.containerHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+input{
+    position: fixed;
+  top: 50px;
+left: 10vw;
+height: 30px;
+width: 20vw;
+}
+select{
+    position: fixed;  
+    top: 50px;
+    right: 10vw;
+    height: 30px;
+width: 20vw;
+}
+.containerItem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: nowrap;
+  
+}
+.containerList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+ flex-wrap: nowrap;
+  width: 40vw;
+}
+img{
+    display: block;
+    width: 40vw;
+}
+li{
+    list-style:none;
+}
